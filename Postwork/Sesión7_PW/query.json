@@ -1,0 +1,13 @@
+[{$match: {
+  date: "20/12/15"
+}}, {$match: {
+  "home.team": "Real Madrid"
+}}, {$addFields: {
+  RealMadridScore: "$home.score"
+}}, {$addFields: {
+  AwayTeam: "$away.team"
+}}, {$project: {
+  date:1,
+  RealMadridScore:1,
+  AwayTeam:1,
+}}]
