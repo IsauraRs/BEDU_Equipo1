@@ -24,7 +24,7 @@ ui <-
                         fluidRow(
                             titlePanel("Histogramas correspondientes a las variables del dataset para enfermedades coronarias."),
                             selectInput("x","Seleccione el valor de X",
-                            choices = c("male","age","currentSmoker","prevalentStroke","prevalentHyp","diabetes","sysBP","diaBP","TenYearCHD")),
+                            choices = names(dataset)),
                             box(plotOutput("plot1", height = 300)),
                             box(
                                 title = "Control",
@@ -72,12 +72,11 @@ ui <-
         })
 
         output$output_plot <- renderPlot({
-            ggplot(dataset, aes(x = dataset[,input$x1], y = dataset[,input$y1],
+            ggplot(dataset, aes(x = dataset[,input$x1], y = dataset[,input$y1]))+
             geom_point()+
             ylab(input$y1)+
             xlab(input$x1)+
             theme_linedraw()
-            ))
         })
         output$DataTable<- renderDataTable({dataset},
                                             options = list(aLengthMenu = c(10,20,30,40,50,100,110,120,150,200,210,220,250),
