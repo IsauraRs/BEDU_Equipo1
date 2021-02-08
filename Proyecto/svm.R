@@ -65,7 +65,7 @@ summary(tune.out)
 #aca ponemos el modelo con la mejor configuracion para no tener que volver a 
 #correr lo de arriba
 bestmod <- svm(TenYearCHD~., data = train, kernel = "radial", 
-               cost = 2, gamma= 0.5)
+               cost = 0.001, gamma= 0.5)
 
 summary(bestmod)
 
