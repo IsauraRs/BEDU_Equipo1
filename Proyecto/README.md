@@ -34,7 +34,7 @@ Después de analizar los datos mediante gráficas, nos dimos cuenta de que puede
 
 ## Hallazgos relevantes
 
-Además de encontrar que parte de nuestra hipótesis es cierta, encontramos que otros atributos como el nivel de colesterol, presión arterial diabólica y el sexo como factores que influyen en la posibilidad de presentar una enfermedad coronaria.
+Además de encontrar que parte de nuestra hipótesis es cierta, encontramos que otros atributos como el nivel de colesterol, presión arterial diastólica y el sexo como factores que influyen en la posibilidad de presentar una enfermedad coronaria.
 
 La educacion y si el paciente es actualmente un fumador, no parecen tener alguna influencia en la posibilidad de presentar una enfermedad coronaria.
 
